@@ -64,7 +64,10 @@ const SearchPlaces = () => {
     };
 
     const handlePageSizeChange = (value) => {
-        setPageSize(value);
+        if (value > 10)
+            setPageSize(10)
+        else
+            setPageSize(value);
         setCurrentPage(1);
     };
 
